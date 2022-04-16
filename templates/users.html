@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+<br>
+<br>
+<br>
+{% block content %}
+
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in result %}
+    <tr>
+      <th scope="row">{{i.empId}}</th>
+      <td>{{i.empFirstName}}</td>
+      <td>{{i.empLastName}}</td>
+      <td>{{i.empUserName}}</td>
+      <td>{{i.empAge}}</td>
+      <td>{{i.empDOB}}</td>
+      <td>{{i.empGender}}</td>
+      <td>{{i.empPhone}}</td>
+    </tr>
+    {%endfor%}
+  </tbody>
+</table>
+{% endblock %}
