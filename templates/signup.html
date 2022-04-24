@@ -1,4 +1,7 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} {% block body %}
+{% block title %}Add User | Tycoon{% endblock %}
+
+{% block isActiveAddUser %}active {% endblock %}
 <section
   class="vh-100 bg-image"
   style="
@@ -11,10 +14,22 @@
         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
           <div class="card" style="border-radius: 15px">
             <div class="card-body p-5">
-              <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+              <h2 class="text-uppercase text-center mb-5">Add an User</h2>
 
               <form action="createUser" method="post">
                 {% csrf_token %}
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form3Example1cg" 
+                    >Emp Id*</label
+                  >
+                  <input
+                    type="text"
+                    id="form3Example1cg"
+                    class="form-control form-control-lg"
+                    name="empId"
+                    required
+                  />
+                </div>
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example1cg" 
                     >First Name*</label
