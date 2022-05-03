@@ -83,7 +83,7 @@ DATABASES = {
         'USER'    : 'shibinthomas',                     
         'PASSWORD': 'shibint85@',              
         'HOST'    : 'db4free.net',                
-        'PORT'    : '3306',
+        #'PORT'    : '3306',
     }
 }
 
